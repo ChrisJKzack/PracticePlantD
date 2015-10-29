@@ -55,7 +55,7 @@ public class PlayerPrefManager : MonoBehaviour {
 
     public static void SetDifficulty(int difficulty)
     {
-        if (difficulty > 0 && difficulty <= 5)
+        if (difficulty >= 1 && difficulty <= 3)
         {
             PlayerPrefs.SetInt(DIFFICULTY_KEY, difficulty);
         }
