@@ -17,6 +17,8 @@ public class MusicManager : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
     }
 
+
+
     void OnLevelWasLoaded(int level)
     {
         AudioClip thisLevelMusic = LevelMusicChangeArray[level];
@@ -27,5 +29,10 @@ public class MusicManager : MonoBehaviour {
             audioSource.loop = true;
             audioSource.Play();
         }
+    }
+
+    public void ChangeVolume(float volume)
+    {
+        audioSource.volume = volume;
     }
 }
